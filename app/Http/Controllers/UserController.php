@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Test;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -37,7 +38,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $user = new Test;
         $user->name = Request('name');
