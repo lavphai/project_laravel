@@ -31,56 +31,40 @@
   <div class="container">
     <div class="row">
       <div class="col col-md-12">
-        <div class="alert alert-primary">
-          <nav class="navbar navbar-default navbar-static-top">
-                  <div class="navbar-header">
+        <div class="panel panel-default">
                       <!-- Collapsed Hamburger -->
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                          <span class="sr-only">Toggle Navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
 
+                      <h1> This is Example Project </h1>
                       <!-- Branding Image -->
-                      <a class="navbar-brand" href="{{ url('/') }}">
+                      <h4> Project Base on  <a  href="{{ url('/') }}">
                           Laravel
-                      </a>
-                  </div>
-
-                  <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                      <!-- Left Side Of Navbar -->
-                      <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/home') }}">Home</a></li>
-                      </ul>
-
-                      <!-- Right Side Of Navbar -->
-                      <ul class="nav navbar-nav navbar-right">
-                          <!-- Authentication Links -->
-                          @if (Auth::guest())
-                              <li><a href="{{ url('/login') }}">Login</a></li>
-                              <li><a href="{{ url('/register') }}">Register</a></li>
-                          @else
-                              <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                      {{ Auth::user()->name }} <span class="caret"></span>
-                                  </a>
-
-                                  <ul class="dropdown-menu" role="menu">
-                                      <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                  </ul>
-                              </li>
-                          @endif
-                      </ul>
-                  </div>
-          </nav>
+                      </a></h4>
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col col-md-3">
         <div class="alert alert-dark">
-            This is Menu.
+          <div>
+              <!-- Left Side Of Navbar -->
+                  <a href="{{ url('/home') }}">Home</a><br>
+
+              <!-- Right Side Of Navbar -->
+                  <!-- Authentication Links -->
+                  @if (Auth::guest())
+                      <a href="{{ url('/login') }}">Login</a><br>
+                      <a href="{{ url('/register') }}">Register</a><br>
+<hr>
+                      <a href="{{url('user/create')}}">เพิ่มผู้ใช้</a><br>
+
+                  @else
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                              {{ Auth::user()->name }} <span class="caret"></span>
+                          </a><br>
+                          <a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+                  @endif
+          </div>
         </div>
       </div>
       <div class="col col-md-9">
@@ -89,6 +73,7 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col col-md-12">
         <div class="alert alert-primary">
@@ -96,8 +81,7 @@
         </div>
       </div>
     </div>
-
-  </div>
+</div>
 
 
 
